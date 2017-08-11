@@ -1,0 +1,48 @@
+<doctype HTML5>
+<html lang ="en">
+<head> 
+<title>Making Change</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="navbar">
+            <ul id="thelist">
+                <li><a href="http://localhost:4567/about">About</a></li>
+                <li><a href="http://www.minedminds.org/contact">Contacts</a></li>
+                    <div class="dropdown">
+                    <button class="dropbtn">Links</button>
+                     <div class="dropdown-content">
+                        <a href="https://www.google.com/"target ="-blank">Search</a>
+                        <a href="http://www.minedminds.org/" target ="-blank">Our Partner</a>
+                        <a href="https://stackoverflow.com/" target ="-blank">Resources</a>
+                    </div>
+    </div> 
+            </ul>
+</div>
+
+<div id="mmpic">
+ <img src='../img/mm.resized.jpg'>
+</div>
+<div id="enterchange">
+Please enter the amount of change under one dollar which you would like to exchange:
+<form method = "post" action = "/index">
+  <input type = "number" min ="1" max ="100"  name = "num">
+<input type = "submit" value = "Continue">
+</form>
+</div>
+ <div id="java">
+
+ <script type="text/javascript">
+// // confirm(new Date().toLocaleString();)
+// // console.log(new Date().toLocaleString();)
+// // </script>
+ </div>
+<div id="box">
+<button onclick="myFunction()">What time is it?</button>
+<script>
+function myFunction() {
+    alert(new Date().toLocaleString());
+}
+</script>
+</div>
+</body>

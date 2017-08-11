@@ -1,0 +1,53 @@
+ <doctype HTML5>
+<html lang ="en">
+<head> 
+<title>Making Change</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<script type="text/javascript">
+function replaceImage(e) {
+    var image = document.getElementById('image');
+    image.src = '../img/maxresdefault.resized.jpg';
+    return false;
+}
+</script>
+<script type="text/javascript">
+
+ function enter(elem){
+     elem.style.backgroundColor = '#FFFFFF';
+ }
+
+ function leave(elem){
+
+     elem.style.backgroundColor = 'rgba(255, 255,255,0.6)';
+ }
+
+</script>
+<body>
+ <div id="navbar">
+            <ul id="thelist">
+                <li><a href="http://localhost:4567/about">About</a></li>
+                <li><a href="http://www.minedminds.org/contact">Contacts</a></li>
+                    <div class="dropdown">
+                    <button class="dropbtn">Links</button>
+                     <div class="dropdown-content">
+                        <a href="https://www.google.com/"target ="-blank">Search</a>
+                        <a href="http://www.minedminds.org/" target ="-blank">Our Partner</a>
+                        <a href="https://stackoverflow.com/" target ="-blank">Resources</a>
+                    </div>
+    </div> 
+            </ul>
+</div>
+<div id="background1">
+<a href='#' onClick='replaceImage();' title='Reload image'>Replace Image</a>
+                            <img id="image" src='../img/mm.resized.jpg'/>
+</div>
+<%# <div id="mmpic">
+ <img src='../img/mm.resized.jpg'>
+</div> %>
+<div id="result" onmouseover="enter(this)" onmouseout="leave(this)">
+Your change is <%= change %>
+</div>
+
+
+</body>
