@@ -6,6 +6,6 @@ def pairs(names)
       last_one = last_one[0]
       pairs[0] << last_one
     end    
-    pairs.map! { |v,e,f| "#{v}, " "#{e}, " "#{f}, "}.join" and "
+    pairs.map! { |v,e,f| "#{v}, " "#{e}, " "#{f} "}.join" and "
     
 end
