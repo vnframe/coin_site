@@ -1,4 +1,8 @@
 <html>
+<head> 
+<title>Pairing</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 <script>
     function generate() {
 
@@ -16,6 +20,26 @@
     }
     </script>
     <body>
+    <div id="mmpic">
+ <img src='../img/mm.resized.jpg'>
+</div>
+<div id="navbar">
+            <ul id="thelist">
+                <li><a href="http://localhost:4567/about">About</a></li>
+                <li><a href="http://www.minedminds.org/contact">Contacts</a></li>
+                <li> <a href="/pairing">Pair Generator</a></li>
+                    <div class="dropdown">
+                    <button class="dropbtn">Links</button>
+                     <div class="dropdown-content">
+    
+                        <a href="https://www.google.com/"target ="-blank">Search</a>
+                        <a href="http://www.minedminds.org/" target ="-blank">Our Partner</a>
+                        <a href="https://stackoverflow.com/" target ="-blank">Resources</a>
+                    </div>
+    </div> 
+            </ul>
+</div>
+<div id="pairinput">
 How many people would you like to  pair?
         <form method="post" action="/pairing">
             <input type="text" id="nochapter" />
@@ -23,5 +47,7 @@ How many people would you like to  pair?
             <div id="listOfNames"></div>
             <input type = "submit" value = "Continue">
         </form>
+ </div>
+
     </body>
 </html>

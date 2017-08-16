@@ -130,3 +130,13 @@ a:hover {
     float: right;
     color: purple;
 }
+
+#pairinput {
+    background-color: lightgray;
+    position: fixed;
+    top: 100px;
+    height: 300px;
+    width: 1290px;
+    border: #00001c solid top 3px;
+    opacity: 0.8;
+}
