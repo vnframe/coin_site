@@ -1,0 +1,27 @@
+<html>
+<script>
+    function generate() {
+
+        var a = parseInt(document.getElementById("nochapter").value);
+        var ch = document.getElementById("listOfNames");
+
+        for (i = 0; i < a; i++) {
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "text" + i;
+            input.id = "classname";
+            input.required = true;
+            document.getElementById("listOfNames").appendChild(input).value;
+        }
+    }
+    </script>
+    <body>
+How many people would you like to  pair?
+        <form method="post" action="/pairing">
+            <input type="text" id="nochapter" />
+            <input type="button" value="set" name="classname" onclick="generate()" />
+            <div id="listOfNames"></div>
+            <input type = "submit" value = "Continue">
+        </form>
+    </body>
+</html>
