@@ -6,13 +6,13 @@
 <script>
     function generate() {
 
-        var a = parseInt(document.getElementById("nochapter").value);
+        var a = 1 //(document.getElementById("nochapter").value);
         var ch = document.getElementById("listOfNames");
 
         for (i = 0; i < a; i++) {
             var input = document.createElement("input");
             input.type = "text";
-            input.name = "text" + i;
+            input.name = "text[]";
             input.id = "classname";
             input.required = true;
             document.getElementById("listOfNames").appendChild(input).value;
@@ -20,9 +20,7 @@
     }
     </script>
     <body>
-    <div id="mmpic">
- <img src='../img/mm.resized.jpg'>
-</div>
+    
 <div id="navbar">
             <ul id="thelist">
                 <li><a href="http://localhost:4567/about">About</a></li>
@@ -39,10 +37,12 @@
     </div> 
             </ul>
 </div>
+<div id="mmpic">
+        <img src='../img/mm.resized.jpg'>
+</div>
 <div id="pairinput">
 How many people would you like to  pair?
         <form method="post" action="/pairing">
-            <input type="text" id="nochapter" />
             <input type="button" value="set" name="classname" onclick="generate()" />
             <div id="listOfNames"></div>
             <input type = "submit" value = "Continue">

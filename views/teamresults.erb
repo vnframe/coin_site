@@ -1,1 +1,36 @@
-Your assigned groups are <%=team%>
+<html>
+<head> 
+<title>results</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<div id="navbar">
+            <ul id="thelist">
+                <li><a href="http://localhost:4567/about">About</a></li>
+                <li><a href="http://www.minedminds.org/contact">Contacts</a></li>
+                <li> <a href="/pairing">Pair Generator</a></li>
+                    <div class="dropdown">
+                    <button class="dropbtn">Links</button>
+                     <div class="dropdown-content">
+    
+                        <a href="https://www.google.com/"target ="-blank">Search</a>
+                        <a href="http://www.minedminds.org/" target ="-blank">Our Partner</a>
+                        <a href="https://stackoverflow.com/" target ="-blank">Resources</a>
+                    </div>
+    </div> 
+            </ul>
+</div>
+<div id="mmpic">
+ <img src='../img/mm.resized.jpg'>
+</div>
+<div id = disteams>
+Your assigned groups are <br>
+  <%team.each do |value|%> %>
+ <form method="post" action = "/teamresults">
+<p><input type="checkbox" value= <%= value.join(",")%> name = "team[]"><%=value%></p>
+ <%end %>
+      <center> <input type = "submit"> <center> 
+</form>
+</div>
+</body>      

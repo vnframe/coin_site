@@ -20,13 +20,25 @@ get '/changepage' do
   erb :changepage, :locals => {:number => number, :change => change}
 end
 get "/pairing" do 
+   name = params[:text]
+  team = params[:team]
   erb :pairing
 end
 post "/pairing" do 
-  name = params.values
+  name = params[:text]
   team = params[:team]
-team = pairs(name).to_s
+team = pairs(name)
 puts "name is #{name}"
 puts "team is #{team}"
-erb :teamresults, :locals => {:team => team}
+erb :teamresults, :locals => {:team => team, :name => name}
 end
+get "/teamresults" do
+  name = params[:text]
+  team = params[:team]
+  erb :teamresults, :locals => {:team => team, :name => name}
+end
+post "/teamresults" do 
+  name = params[:text]
+  team = params[:team]
+  erb :final, :locals => {:team => team, :name => name}
+  end
